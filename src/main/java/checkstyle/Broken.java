@@ -2,10 +2,8 @@ package checkstyle;
 
 public class Broken {
     private final int sizeOfEmpty = 10;
-
     public String surname;
     public static final String NEW_VALUE = "";
-
     private String name;
 
     public Broken() {
