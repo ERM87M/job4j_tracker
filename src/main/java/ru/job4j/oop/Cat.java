@@ -1,6 +1,6 @@
 package ru.job4j.oop;
 
-public class Cat {
+ public class Cat {
     private String food;
     private String name;
 
