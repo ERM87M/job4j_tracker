@@ -54,4 +54,5 @@ public class ShopDropTest {
         assertThat(result[3].getName()).isEqualTo("Fruit");
         assertThat(result[products.length - 1]).isNull();
     }
+
 }
