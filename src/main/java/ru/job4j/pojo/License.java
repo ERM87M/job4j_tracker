@@ -50,7 +50,10 @@ public class License {
             return false;
         }
         License licence = (License) o;
-        return Objects.equals(owner, licence.owner) && Objects.equals(model, licence.model) && Objects.equals(code, licence.code) && Objects.equals(created, licence.created);
+        return Objects.equals(owner, licence.owner)
+                && Objects.equals(model, licence.model)
+                && Objects.equals(code, licence.code)
+                && Objects.equals(created, licence.created);
     }
 
     @Override
