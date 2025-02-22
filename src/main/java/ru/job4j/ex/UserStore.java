@@ -7,24 +7,19 @@ public class UserStore {
                 return user;
             }
         }
-        throw new UserNotFoundException("Пользователь не найден: " + login);
+        throw new UserNotFoundException("Пользователь не найден");
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (!user.isValid()) {
-            throw new UserInvalidException("Пользователь не валиден: " + user.getUsername());
-        }
-        if (user.getUsername().length() < 3) {
-            throw new UserInvalidException("Имя пользователя слишком короткое: " + user.getUsername());
+        if (!user.isValid() || user.getUsername().length() < 3) {
+            throw new UserInvalidException("Пользователь не валиден");
         }
         return true;
     }
 
     public static void main(String[] args) {
         User[] users = {
-                new User("Petr Arsentev", true),
-                new User("Anton", true),
-                new User("Igor", false)
+                new User("Petr Arsentev", true)
         };
 
         try {
@@ -32,10 +27,10 @@ public class UserStore {
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
-        } catch (UserNotFoundException e) {
-            System.out.println("Ошибка: " + e.getMessage());
         } catch (UserInvalidException e) {
-            System.out.println("Ошибка: " + e.getMessage());
+            System.out.println("Пользователь не валидный");
+        } catch (UserNotFoundException e) {
+            System.out.println("Пользователь не найден");
         }
     }
 }
