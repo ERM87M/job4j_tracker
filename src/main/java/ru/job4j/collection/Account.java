@@ -30,12 +30,7 @@ public class Account {
         return Objects.hashCode(passport);
     }
 
-    @Override
     public String toString() {
-        return "Account{" +
-                "passport='" + passport + '\'' +
-                ", userName='" + userName + '\'' +
-                ", deposit='" + deposit + '\'' +
-                '}';
+        return "Account{" + "passport='" + passport + '\'' + ", userName='" + userName + '\'' + ", deposit='" + deposit + '\'' + '}';
     }
 }
