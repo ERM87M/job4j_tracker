@@ -9,6 +9,7 @@ public class UsageMap {
         map.put("Max@yandex.ru", "Max Max");
         map.put("Sam@yandex.ru", "Sam Samuel");
         map.put("Yoto@yandex.ru", "Yoto Toto");
+        map.put("Yoto@yandex.ru", "Travis Samuel");
         for (String key : map.keySet()) {
             String value = map.get(key);
             System.out.println(key + " = " + value);
