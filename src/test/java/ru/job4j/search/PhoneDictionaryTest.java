@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PhoneDictionaryTest {
     @Test
     public void whenFindByName() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
@@ -19,7 +19,7 @@ public class PhoneDictionaryTest {
 
     @Test
     public void whenNotFound() {
-        PhoneDictionary phone = new PhoneDictionary();
+        var phone = new PhoneDictionary();
         phone.add(new Person("Денис", "Лимитц", "3421123", "Москва"));
         ArrayList<Person> result = phone.find("Калининград");
         assertThat(phone.find("Roman")).isEmpty();
